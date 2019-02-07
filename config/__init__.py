@@ -1,2 +1,2 @@
-from .get_config import get_config
+from .config_abstract import AppConfigAbstract
 from .config_default import AppConfigDefault
