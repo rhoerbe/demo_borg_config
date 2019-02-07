@@ -1,0 +1,21 @@
+= Application configuration using BORG and Django-style config module loading
+
+== BORG
+As Alex Martelli explains nicely in his http://www.aleax.it/5ep.html[Five Easy Pieces: Simple Python Non-Patterns],
+a Singleton pattern is neither ideal nor semantically really appropriate for sharing state.
+
+== Django-style config file loading
+
+Django allows users to specify the settings module in an environment variable.
+
+This concept is extended by providing a default configuration.
+
+== Description
+
+This demo project shows how to employ a global configuration object in an application,
+fulfilling following requirements:
+
+1. Configration data can be loaded with a plain function call, and does not need to be passed around.
+2. The configuration can be loaded from a file specified in an environment variable.
+3. Configration data already loaded can be overwritten.
+   This enabled a program to obtain CLI args to change the configured defaults.
